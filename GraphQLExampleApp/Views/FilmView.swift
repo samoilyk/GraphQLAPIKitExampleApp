@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FilmView: View {
     let film: Film
-    let action: (String) -> Void
+    let action: () -> Void
 
     var body: some View {
         Text(film.name)
@@ -20,7 +20,7 @@ struct FilmView: View {
             .cornerRadius(10)
             .contentShape(Rectangle())
             .onTapGesture {
-                action(film.id)
+                action()
             }
     }
 }

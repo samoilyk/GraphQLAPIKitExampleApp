@@ -12,11 +12,11 @@ struct FilmsComponent<Model: ExampleComponentModelProtocol>: View {
 
     var body: some View {
         Group {
-            if let films = model.films {
+            if !model.films.isEmpty {
                 List {
-                    ForEach(films, id: \.id) { film in
-                        FilmView(film: film) { id in
-                            model.tappedOnFilm(with: id)
+                    ForEach(model.films, id: \.id) { film in
+                        FilmView(film: film) {
+                            model.tapped(on: film)
                         }
                     }
                 }

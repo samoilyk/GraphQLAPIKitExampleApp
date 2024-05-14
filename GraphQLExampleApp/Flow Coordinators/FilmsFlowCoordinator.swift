@@ -27,8 +27,8 @@ final class FilmsFlowCoordinator: NavigationStackCoordinator {
                 model: FilmsComponentModel(
                     dataCache: instance.container.dataCache) { [weak instance] event in
                     switch event {
-                    case let .filmTapped(id):
-                        instance?.path.append(.filmDetail(id))
+                    case let .filmTapped(film):
+                        instance?.path.append(.filmDetail(film))
                     case let .alert(title, message):
                         instance?.alertModel = .init(title: title, message: message)
                     }
@@ -40,20 +40,27 @@ final class FilmsFlowCoordinator: NavigationStackCoordinator {
     @ViewBuilder
     func scene(for destination: Destination) -> some View {
         switch destination {
-        case .filmDetail(let id):
-            EmptyView()
+        case .filmDetail(let film):
+            FilmDetailComponent(
+                model: FilmDetailComponentModel(
+                    dataCache: self.container.dataCache,
+                    resource: FilmDetailResource(),
+                    film: film,
+                    onEvent: { _ in }
+                )
+            )
         }
     }
 }
 
 extension FilmsFlowCoordinator {
     enum Destination: Hashable, Identifiable {
-        case filmDetail(String)
+        case filmDetail(Film)
 
         var id: String {
             switch self {
-            case .filmDetail(let id):
-                return "filmDetail:\(id)"
+            case .filmDetail(let film):
+                return "filmDetail:\(film.id)"
             }
         }
     }

@@ -10,9 +10,9 @@ import Foundation
 import FuturedArchitecture
 
 protocol ExampleComponentModelProtocol: ComponentModel {
-    var films: [Film]? { get }
+    var films: [Film] { get }
 
-    func tappedOnFilm(with id: String)
+    func tapped(on film: Film)
     func onAppear() async
 }
 
@@ -20,7 +20,7 @@ final class FilmsComponentModel: ExampleComponentModelProtocol {
 
     let onEvent: (Event) -> Void
 
-    @Published var films: [Film]?
+    @Published var films: [Film] = [ Film(id: "", name: "Some film", releaseDate: "Some date", director: "Some director", planets: []) ]
     private let dataCache: DataCache<DataCacheModel>
 
     init(
@@ -39,35 +39,26 @@ final class FilmsComponentModel: ExampleComponentModelProtocol {
             .assign(to: &$films)
     }
 
-    func tappedOnFilm(with id: String) {
-        onEvent(.filmTapped(id: id))
-    }
-
-    func onApear() {
-        // fetch data
+    func tapped(on film: Film) {
+        onEvent(.filmTapped(film))
     }
 }
 
 extension FilmsComponentModel {
     enum Event {
-        case filmTapped(id: String)
+        case filmTapped(Film)
         case alert(title: String, message: String)
     }
 }
 
 #if DEBUG
 final class FilmsComponentModelMock: ExampleComponentModelProtocol {
-    var films: [Film]? {
-        [
-            Film(id: "1", name: "Film 1"),
-            Film(id: "2", name: "Film 2"),
-            Film(id: "3", name: "Film 3"),
-            Film(id: "4", name: "Film 4")
-        ]
-    }
+    func tapped(on film: Film) {
 
-    func tappedOnFilm(with id: String) {
-        //
+    }
+    
+    var films: [Film] {
+        []
     }
     
     typealias Event = FilmsComponentModel.Event

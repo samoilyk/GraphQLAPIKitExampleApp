@@ -7,7 +7,10 @@
 
 import Foundation
 
-struct Film: Equatable {
+struct Film: Hashable {
     let id: String
     let name: String
+    let releaseDate: String
+    let director: String
+    let planets: [Planet]
 }

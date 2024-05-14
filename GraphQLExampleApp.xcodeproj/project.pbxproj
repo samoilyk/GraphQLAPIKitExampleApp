@@ -24,10 +24,6 @@
 		FC79DBBE2BF37C5300E9E28D /* FuturedHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBBD2BF37C5300E9E28D /* FuturedHelpers */; };
 		FC79DBC02BF37C5300E9E28D /* GraphQLAPIKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBBF2BF37C5300E9E28D /* GraphQLAPIKit */; };
 		FC79DBC32BF37E7500E9E28D /* FilmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBC22BF37E7500E9E28D /* FilmView.swift */; };
-		FC79DBC52BF3827300E9E28D /* FilmDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBC42BF3827300E9E28D /* FilmDetail.swift */; };
-		FC79DBCA2BF383EC00E9E28D /* PlanetsComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBC72BF383EC00E9E28D /* PlanetsComponentModel.swift */; };
-		FC79DBCB2BF383EC00E9E28D /* PlanetsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBC82BF383EC00E9E28D /* PlanetsComponent.swift */; };
-		FC79DBCC2BF383EC00E9E28D /* PlanetsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBC92BF383EC00E9E28D /* PlanetsResource.swift */; };
 		FC79DBCE2BF3849C00E9E28D /* PlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBCD2BF3849C00E9E28D /* PlanetView.swift */; };
 		FC79DBDB2BF389E300E9E28D /* FilmDetailComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBD82BF389E300E9E28D /* FilmDetailComponentModel.swift */; };
 		FC79DBDC2BF389E300E9E28D /* FilmDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBD92BF389E300E9E28D /* FilmDetailComponent.swift */; };
@@ -50,10 +46,6 @@
 		FC79DBB62BF37B7D00E9E28D /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		FC79DBB82BF37BA300E9E28D /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		FC79DBC22BF37E7500E9E28D /* FilmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmView.swift; sourceTree = "<group>"; };
-		FC79DBC42BF3827300E9E28D /* FilmDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetail.swift; sourceTree = "<group>"; };
-		FC79DBC72BF383EC00E9E28D /* PlanetsComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsComponentModel.swift; sourceTree = "<group>"; };
-		FC79DBC82BF383EC00E9E28D /* PlanetsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsComponent.swift; sourceTree = "<group>"; };
-		FC79DBC92BF383EC00E9E28D /* PlanetsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsResource.swift; sourceTree = "<group>"; };
 		FC79DBCD2BF3849C00E9E28D /* PlanetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetView.swift; sourceTree = "<group>"; };
 		FC79DBD82BF389E300E9E28D /* FilmDetailComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailComponentModel.swift; sourceTree = "<group>"; };
 		FC79DBD92BF389E300E9E28D /* FilmDetailComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailComponent.swift; sourceTree = "<group>"; };
@@ -115,7 +107,6 @@
 			children = (
 				FC072F592BF377BF009E2B8D /* DataCacheModel.swift */,
 				FC79DBB62BF37B7D00E9E28D /* Film.swift */,
-				FC79DBC42BF3827300E9E28D /* FilmDetail.swift */,
 				FC79DBB82BF37BA300E9E28D /* Planet.swift */,
 			);
 			path = Model;
@@ -125,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				FC79DBDE2BF389EF00E9E28D /* Film Detail */,
-				FC79DBC62BF383CE00E9E28D /* Planets */,
 				FC072F5C2BF377BF009E2B8D /* Films */,
 			);
 			path = Scenes;
@@ -179,16 +169,6 @@
 				FC79DBCD2BF3849C00E9E28D /* PlanetView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FC79DBC62BF383CE00E9E28D /* Planets */ = {
-			isa = PBXGroup;
-			children = (
-				FC79DBC72BF383EC00E9E28D /* PlanetsComponentModel.swift */,
-				FC79DBC82BF383EC00E9E28D /* PlanetsComponent.swift */,
-				FC79DBC92BF383EC00E9E28D /* PlanetsResource.swift */,
-			);
-			path = Planets;
 			sourceTree = "<group>";
 		};
 		FC79DBDE2BF389EF00E9E28D /* Film Detail */ = {
@@ -290,12 +270,8 @@
 				FC072F5A2BF377BF009E2B8D /* DataCacheModel.swift in Sources */,
 				FC072F532BF377BF009E2B8D /* AppCoordinator.swift in Sources */,
 				FC072F512BF377BF009E2B8D /* GraphQLExampleAppApp.swift in Sources */,
-				FC79DBCA2BF383EC00E9E28D /* PlanetsComponentModel.swift in Sources */,
-				FC79DBCB2BF383EC00E9E28D /* PlanetsComponent.swift in Sources */,
-				FC79DBCC2BF383EC00E9E28D /* PlanetsResource.swift in Sources */,
 				FC072F782BF37958009E2B8D /* FilmsResource.swift in Sources */,
 				FC79DBB92BF37BA300E9E28D /* Planet.swift in Sources */,
-				FC79DBC52BF3827300E9E28D /* FilmDetail.swift in Sources */,
 				FC79DBCE2BF3849C00E9E28D /* PlanetView.swift in Sources */,
 				FC79DBC32BF37E7500E9E28D /* FilmView.swift in Sources */,
 				FC072F602BF377BF009E2B8D /* FilmsComponent.swift in Sources */,

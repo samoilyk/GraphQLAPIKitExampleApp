@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct PlanetView: View {
-    let id: String
-    let name: String
+    let planet: Planet
     let action: (String) -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(name)
+            Text(planet.name)
                 .font(.headline)
                 .foregroundColor(.primary)
         }
@@ -23,7 +22,7 @@ struct PlanetView: View {
         .cornerRadius(10)
         .contentShape(Rectangle())
         .onTapGesture {
-            action(id)
+            action(planet.id)
         }
     }
 }

@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct Planet: Equatable {
+struct Planet: Hashable {
     let id: String
     let name: String
     let population: Float
     let gravity: String
-    let films: [Film]
 }
