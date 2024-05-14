@@ -12,9 +12,9 @@ struct FilmsComponent<Model: ExampleComponentModelProtocol>: View {
 
     var body: some View {
         Group {
-            if !model.films.isEmpty {
+            if let films = model.films {
                 List {
-                    ForEach(model.films, id: \.id) { film in
+                    ForEach(films, id: \.id) { film in
                         FilmView(film: film)
                             .contentShape(Rectangle())
                             .onTapGesture {
