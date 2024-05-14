@@ -10,7 +10,7 @@ import Foundation
 import FuturedArchitecture
 
 protocol ExampleComponentModelProtocol: ComponentModel {
-    var films: [Film] { get }
+    var films: [Film]? { get }
 
     func tapped(on film: Film)
     func onAppear() async
@@ -20,7 +20,7 @@ final class FilmsComponentModel: ExampleComponentModelProtocol {
 
     let onEvent: (Event) -> Void
 
-    @Published var films: [Film] = [ Film(id: "", name: "Some film", releaseDate: "Some date", director: "Some director", planets: []) ]
+    @Published var films: [Film]?
     private let dataCache: DataCache<DataCacheModel>
 
     init(
@@ -57,7 +57,7 @@ final class FilmsComponentModelMock: ExampleComponentModelProtocol {
 
     }
     
-    var films: [Film] {
+    var films: [Film]? {
         []
     }
     

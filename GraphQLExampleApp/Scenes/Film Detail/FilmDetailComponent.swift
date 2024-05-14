@@ -13,7 +13,7 @@ struct FilmDetailComponent<Model: FilmDetailComponentModelProtocol>: View {
     var body: some View {
         VStack(spacing: 20) {
             Spacer()
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 5) {
                 Text(model.film.name)
                     .font(.headline)
                     .foregroundColor(.primary)
@@ -26,9 +26,6 @@ struct FilmDetailComponent<Model: FilmDetailComponentModelProtocol>: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
-            .padding(8)
-            .background(Color.gray.opacity(0.1))
-            .cornerRadius(10)
 
             List {
                 ForEach(model.film.planets, id: \.id) { planet in
@@ -36,6 +33,8 @@ struct FilmDetailComponent<Model: FilmDetailComponentModelProtocol>: View {
                 }
             }
         }
+        .padding(8)
+        .cornerRadius(10)
         .task {
             await model.onAppear()
         }

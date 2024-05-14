@@ -15,9 +15,11 @@ struct FilmsComponent<Model: ExampleComponentModelProtocol>: View {
             if !model.films.isEmpty {
                 List {
                     ForEach(model.films, id: \.id) { film in
-                        FilmView(film: film) {
-                            model.tapped(on: film)
-                        }
+                        FilmView(film: film)
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                model.tapped(on: film)
+                            }
                     }
                 }
             } else {
