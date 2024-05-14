@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC072F512BF377BF009E2B8D /* GraphQLExampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC072F502BF377BF009E2B8D /* GraphQLExampleAppApp.swift */; };
+		FC072F532BF377BF009E2B8D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC072F522BF377BF009E2B8D /* AppCoordinator.swift */; };
+		FC072F552BF377BF009E2B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC072F542BF377BF009E2B8D /* AppDelegate.swift */; };
+		FC072F572BF377BF009E2B8D /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC072F562BF377BF009E2B8D /* Container.swift */; };
+		FC072F5A2BF377BF009E2B8D /* DataCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC072F592BF377BF009E2B8D /* DataCacheModel.swift */; };
+		FC072F5E2BF377BF009E2B8D /* FilmsComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC072F5D2BF377BF009E2B8D /* FilmsComponentModel.swift */; };
+		FC072F602BF377BF009E2B8D /* FilmsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC072F5F2BF377BF009E2B8D /* FilmsComponent.swift */; };
+		FC072F632BF377BF009E2B8D /* FilmsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC072F622BF377BF009E2B8D /* FilmsFlowCoordinator.swift */; };
+		FC072F662BF377C0009E2B8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC072F652BF377C0009E2B8D /* Assets.xcassets */; };
+		FC072F782BF37958009E2B8D /* FilmsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC072F752BF37958009E2B8D /* FilmsResource.swift */; };
+		FC072F7B2BF37AAF009E2B8D /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC072F7A2BF37AAF009E2B8D /* ApiService.swift */; };
+		FC79DBB72BF37B7D00E9E28D /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBB62BF37B7D00E9E28D /* Film.swift */; };
+		FC79DBB92BF37BA300E9E28D /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBB82BF37BA300E9E28D /* Planet.swift */; };
+		FC79DBBC2BF37C5300E9E28D /* FuturedArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBBB2BF37C5300E9E28D /* FuturedArchitecture */; };
+		FC79DBBE2BF37C5300E9E28D /* FuturedHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBBD2BF37C5300E9E28D /* FuturedHelpers */; };
+		FC79DBC02BF37C5300E9E28D /* GraphQLAPIKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBBF2BF37C5300E9E28D /* GraphQLAPIKit */; };
+		FC79DBC32BF37E7500E9E28D /* FilmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBC22BF37E7500E9E28D /* FilmView.swift */; };
+		FC79DBC52BF3827300E9E28D /* FilmDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBC42BF3827300E9E28D /* FilmDetail.swift */; };
+		FC79DBCA2BF383EC00E9E28D /* PlanetsComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBC72BF383EC00E9E28D /* PlanetsComponentModel.swift */; };
+		FC79DBCB2BF383EC00E9E28D /* PlanetsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBC82BF383EC00E9E28D /* PlanetsComponent.swift */; };
+		FC79DBCC2BF383EC00E9E28D /* PlanetsResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBC92BF383EC00E9E28D /* PlanetsResource.swift */; };
+		FC79DBCE2BF3849C00E9E28D /* PlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBCD2BF3849C00E9E28D /* PlanetView.swift */; };
+		FC79DBDB2BF389E300E9E28D /* FilmDetailComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBD82BF389E300E9E28D /* FilmDetailComponentModel.swift */; };
+		FC79DBDC2BF389E300E9E28D /* FilmDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBD92BF389E300E9E28D /* FilmDetailComponent.swift */; };
+		FC79DBDD2BF389E300E9E28D /* FilmDetailResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBDA2BF389E300E9E28D /* FilmDetailResource.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FC072F4D2BF377BF009E2B8D /* GraphQLExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphQLExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC072F502BF377BF009E2B8D /* GraphQLExampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLExampleAppApp.swift; sourceTree = "<group>"; };
+		FC072F522BF377BF009E2B8D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FC072F542BF377BF009E2B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC072F562BF377BF009E2B8D /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		FC072F592BF377BF009E2B8D /* DataCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCacheModel.swift; sourceTree = "<group>"; };
+		FC072F5D2BF377BF009E2B8D /* FilmsComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsComponentModel.swift; sourceTree = "<group>"; };
+		FC072F5F2BF377BF009E2B8D /* FilmsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsComponent.swift; sourceTree = "<group>"; };
+		FC072F622BF377BF009E2B8D /* FilmsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsFlowCoordinator.swift; sourceTree = "<group>"; };
+		FC072F652BF377C0009E2B8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC072F752BF37958009E2B8D /* FilmsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsResource.swift; sourceTree = "<group>"; };
+		FC072F7A2BF37AAF009E2B8D /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		FC79DBB62BF37B7D00E9E28D /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		FC79DBB82BF37BA300E9E28D /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		FC79DBC22BF37E7500E9E28D /* FilmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmView.swift; sourceTree = "<group>"; };
+		FC79DBC42BF3827300E9E28D /* FilmDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetail.swift; sourceTree = "<group>"; };
+		FC79DBC72BF383EC00E9E28D /* PlanetsComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsComponentModel.swift; sourceTree = "<group>"; };
+		FC79DBC82BF383EC00E9E28D /* PlanetsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsComponent.swift; sourceTree = "<group>"; };
+		FC79DBC92BF383EC00E9E28D /* PlanetsResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsResource.swift; sourceTree = "<group>"; };
+		FC79DBCD2BF3849C00E9E28D /* PlanetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetView.swift; sourceTree = "<group>"; };
+		FC79DBD82BF389E300E9E28D /* FilmDetailComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailComponentModel.swift; sourceTree = "<group>"; };
+		FC79DBD92BF389E300E9E28D /* FilmDetailComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailComponent.swift; sourceTree = "<group>"; };
+		FC79DBDA2BF389E300E9E28D /* FilmDetailResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailResource.swift; sourceTree = "<group>"; };
+		FC79DBDF2BF39A6200E9E28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC072F4A2BF377BF009E2B8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC79DBBE2BF37C5300E9E28D /* FuturedHelpers in Frameworks */,
+				FC79DBC02BF37C5300E9E28D /* GraphQLAPIKit in Frameworks */,
+				FC79DBBC2BF37C5300E9E28D /* FuturedArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC072F442BF377BF009E2B8D = {
+			isa = PBXGroup;
+			children = (
+				FC072F4F2BF377BF009E2B8D /* GraphQLExampleApp */,
+				FC072F4E2BF377BF009E2B8D /* Products */,
+				FC79DBBA2BF37C5300E9E28D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC072F4E2BF377BF009E2B8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC072F4D2BF377BF009E2B8D /* GraphQLExampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC072F4F2BF377BF009E2B8D /* GraphQLExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				FC79DBDF2BF39A6200E9E28D /* Info.plist */,
+				FC072F502BF377BF009E2B8D /* GraphQLExampleAppApp.swift */,
+				FC072F522BF377BF009E2B8D /* AppCoordinator.swift */,
+				FC072F542BF377BF009E2B8D /* AppDelegate.swift */,
+				FC072F562BF377BF009E2B8D /* Container.swift */,
+				FC072F582BF377BF009E2B8D /* Model */,
+				FC79DBC12BF37DAE00E9E28D /* Views */,
+				FC072F792BF37A9B009E2B8D /* Services */,
+				FC072F5B2BF377BF009E2B8D /* Scenes */,
+				FC072F612BF377BF009E2B8D /* Flow Coordinators */,
+				FC072F642BF377C0009E2B8D /* Resources */,
+			);
+			path = GraphQLExampleApp;
+			sourceTree = "<group>";
+		};
+		FC072F582BF377BF009E2B8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC072F592BF377BF009E2B8D /* DataCacheModel.swift */,
+				FC79DBB62BF37B7D00E9E28D /* Film.swift */,
+				FC79DBC42BF3827300E9E28D /* FilmDetail.swift */,
+				FC79DBB82BF37BA300E9E28D /* Planet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC072F5B2BF377BF009E2B8D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FC79DBDE2BF389EF00E9E28D /* Film Detail */,
+				FC79DBC62BF383CE00E9E28D /* Planets */,
+				FC072F5C2BF377BF009E2B8D /* Films */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FC072F5C2BF377BF009E2B8D /* Films */ = {
+			isa = PBXGroup;
+			children = (
+				FC072F5D2BF377BF009E2B8D /* FilmsComponentModel.swift */,
+				FC072F5F2BF377BF009E2B8D /* FilmsComponent.swift */,
+				FC072F752BF37958009E2B8D /* FilmsResource.swift */,
+			);
+			path = Films;
+			sourceTree = "<group>";
+		};
+		FC072F612BF377BF009E2B8D /* Flow Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				FC072F622BF377BF009E2B8D /* FilmsFlowCoordinator.swift */,
+			);
+			path = "Flow Coordinators";
+			sourceTree = "<group>";
+		};
+		FC072F642BF377C0009E2B8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC072F652BF377C0009E2B8D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FC072F792BF37A9B009E2B8D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FC072F7A2BF37AAF009E2B8D /* ApiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FC79DBBA2BF37C5300E9E28D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC79DBC12BF37DAE00E9E28D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC79DBC22BF37E7500E9E28D /* FilmView.swift */,
+				FC79DBCD2BF3849C00E9E28D /* PlanetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC79DBC62BF383CE00E9E28D /* Planets */ = {
+			isa = PBXGroup;
+			children = (
+				FC79DBC72BF383EC00E9E28D /* PlanetsComponentModel.swift */,
+				FC79DBC82BF383EC00E9E28D /* PlanetsComponent.swift */,
+				FC79DBC92BF383EC00E9E28D /* PlanetsResource.swift */,
+			);
+			path = Planets;
+			sourceTree = "<group>";
+		};
+		FC79DBDE2BF389EF00E9E28D /* Film Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FC79DBD82BF389E300E9E28D /* FilmDetailComponentModel.swift */,
+				FC79DBD92BF389E300E9E28D /* FilmDetailComponent.swift */,
+				FC79DBDA2BF389E300E9E28D /* FilmDetailResource.swift */,
+			);
+			path = "Film Detail";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC072F4C2BF377BF009E2B8D /* GraphQLExampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC072F6A2BF377C0009E2B8D /* Build configuration list for PBXNativeTarget "GraphQLExampleApp" */;
+			buildPhases = (
+				FC072F492BF377BF009E2B8D /* Sources */,
+				FC072F4A2BF377BF009E2B8D /* Frameworks */,
+				FC072F4B2BF377BF009E2B8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GraphQLExampleApp;
+			packageProductDependencies = (
+				FC79DBBB2BF37C5300E9E28D /* FuturedArchitecture */,
+				FC79DBBD2BF37C5300E9E28D /* FuturedHelpers */,
+				FC79DBBF2BF37C5300E9E28D /* GraphQLAPIKit */,
+			);
+			productName = GraphQLExampleApp;
+			productReference = FC072F4D2BF377BF009E2B8D /* GraphQLExampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC072F452BF377BF009E2B8D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					FC072F4C2BF377BF009E2B8D = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = FC072F482BF377BF009E2B8D /* Build configuration list for PBXProject "GraphQLExampleApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC072F442BF377BF009E2B8D;
+			packageReferences = (
+				FC072F6E2BF377F3009E2B8D /* XCRemoteSwiftPackageReference "FuturedKit" */,
+				FC072F6F2BF3783B009E2B8D /* XCRemoteSwiftPackageReference "GraphQLAPIKit" */,
+			);
+			productRefGroup = FC072F4E2BF377BF009E2B8D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC072F4C2BF377BF009E2B8D /* GraphQLExampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC072F4B2BF377BF009E2B8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC072F662BF377C0009E2B8D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC072F492BF377BF009E2B8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC072F5E2BF377BF009E2B8D /* FilmsComponentModel.swift in Sources */,
+				FC79DBDB2BF389E300E9E28D /* FilmDetailComponentModel.swift in Sources */,
+				FC79DBDC2BF389E300E9E28D /* FilmDetailComponent.swift in Sources */,
+				FC79DBDD2BF389E300E9E28D /* FilmDetailResource.swift in Sources */,
+				FC072F552BF377BF009E2B8D /* AppDelegate.swift in Sources */,
+				FC072F7B2BF37AAF009E2B8D /* ApiService.swift in Sources */,
+				FC79DBB72BF37B7D00E9E28D /* Film.swift in Sources */,
+				FC072F572BF377BF009E2B8D /* Container.swift in Sources */,
+				FC072F5A2BF377BF009E2B8D /* DataCacheModel.swift in Sources */,
+				FC072F532BF377BF009E2B8D /* AppCoordinator.swift in Sources */,
+				FC072F512BF377BF009E2B8D /* GraphQLExampleAppApp.swift in Sources */,
+				FC79DBCA2BF383EC00E9E28D /* PlanetsComponentModel.swift in Sources */,
+				FC79DBCB2BF383EC00E9E28D /* PlanetsComponent.swift in Sources */,
+				FC79DBCC2BF383EC00E9E28D /* PlanetsResource.swift in Sources */,
+				FC072F782BF37958009E2B8D /* FilmsResource.swift in Sources */,
+				FC79DBB92BF37BA300E9E28D /* Planet.swift in Sources */,
+				FC79DBC52BF3827300E9E28D /* FilmDetail.swift in Sources */,
+				FC79DBCE2BF3849C00E9E28D /* PlanetView.swift in Sources */,
+				FC79DBC32BF37E7500E9E28D /* FilmView.swift in Sources */,
+				FC072F602BF377BF009E2B8D /* FilmsComponent.swift in Sources */,
+				FC072F632BF377BF009E2B8D /* FilmsFlowCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FC072F672BF377C0009E2B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC072F682BF377C0009E2B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC072F692BF377C0009E2B8D /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Beta;
+		};
+		FC072F6B2BF377C0009E2B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GraphQLExampleApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.futured.GraphQLExampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC072F6C2BF377C0009E2B8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GraphQLExampleApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.futured.GraphQLExampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FC072F6D2BF377C0009E2B8D /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GraphQLExampleApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.futured.GraphQLExampleApp.beta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Beta;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC072F482BF377BF009E2B8D /* Build configuration list for PBXProject "GraphQLExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC072F672BF377C0009E2B8D /* Debug */,
+				FC072F682BF377C0009E2B8D /* Release */,
+				FC072F692BF377C0009E2B8D /* Beta */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC072F6A2BF377C0009E2B8D /* Build configuration list for PBXNativeTarget "GraphQLExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC072F6B2BF377C0009E2B8D /* Debug */,
+				FC072F6C2BF377C0009E2B8D /* Release */,
+				FC072F6D2BF377C0009E2B8D /* Beta */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC072F6E2BF377F3009E2B8D /* XCRemoteSwiftPackageReference "FuturedKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/futuredapp/FuturedKit/";
+			requirement = {
+				branch = feature/v1.0.0;
+				kind = branch;
+			};
+		};
+		FC072F6F2BF3783B009E2B8D /* XCRemoteSwiftPackageReference "GraphQLAPIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:futuredapp/GraphQLAPIKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC79DBBB2BF37C5300E9E28D /* FuturedArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC072F6E2BF377F3009E2B8D /* XCRemoteSwiftPackageReference "FuturedKit" */;
+			productName = FuturedArchitecture;
+		};
+		FC79DBBD2BF37C5300E9E28D /* FuturedHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC072F6E2BF377F3009E2B8D /* XCRemoteSwiftPackageReference "FuturedKit" */;
+			productName = FuturedHelpers;
+		};
+		FC79DBBF2BF37C5300E9E28D /* GraphQLAPIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC072F6F2BF3783B009E2B8D /* XCRemoteSwiftPackageReference "GraphQLAPIKit" */;
+			productName = GraphQLAPIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FC072F452BF377BF009E2B8D /* Project object */;
+}

@@ -1,0 +1,60 @@
+{
+  "originHash" : "02b9e612666f61b9039f4a4b6f44d3c7540424f2fb926f79b36f6b4d47c2a7c3",
+  "pins" : [
+    {
+      "identity" : "apollo-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apollographql/apollo-ios.git",
+      "state" : {
+        "revision" : "74a16c771a0a5f2cb9e069e8f96125a9288894d0",
+        "version" : "1.9.0"
+      }
+    },
+    {
+      "identity" : "bindingkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mkj-is/BindingKit",
+      "state" : {
+        "revision" : "fe58851b967301ec5c391a2c34979b676b854f89",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "collectionconcurrencykit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/CollectionConcurrencyKit",
+      "state" : {
+        "revision" : "b4f23e24b5a1bff301efc5e70871083ca029ff95",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "futuredkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/futuredapp/FuturedKit/",
+      "state" : {
+        "branch" : "feature/v1.0.0",
+        "revision" : "6623d8ee330d6927a9d2c8beb3556b3c315b18e0"
+      }
+    },
+    {
+      "identity" : "graphqlapikit",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:futuredapp/GraphQLAPIKit.git",
+      "state" : {
+        "revision" : "3bb76acf9a9995f3b8e84c8e386f30338cb71a82",
+        "version" : "0.1.1"
+      }
+    },
+    {
+      "identity" : "sqlite.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stephencelis/SQLite.swift.git",
+      "state" : {
+        "revision" : "a95fc6df17d108bd99210db5e8a9bac90fe984b8",
+        "version" : "0.15.3"
+      }
+    }
+  ],
+  "version" : 3
+}
