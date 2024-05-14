@@ -1,0 +1,27 @@
+{
+  "schemaName" : "GraphQLGenerated",
+  "input" : {
+    "operationSearchPaths" : [
+      "**/*.graphql"
+    ],
+    "schemaSearchPaths" : [
+      "./schema.json"
+    ]
+  },
+  "output" : {
+    "schemaTypes" : {
+      "path" : "./",
+      "moduleType" : {
+        "swiftPackageManager": {}
+      }
+    },
+    "operations" : {
+      "inSchemaModule" : {}
+    },
+    "testMocks" : {
+      "swiftPackage": {
+        "targetName": "GraphQLGeneratedMocks"
+      }
+    }
+  }
+}

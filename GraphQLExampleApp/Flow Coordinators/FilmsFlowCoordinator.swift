@@ -25,7 +25,9 @@ final class FilmsFlowCoordinator: NavigationStackCoordinator {
         NavigationStackFlow(coordinator: instance) {
             FilmsComponent(
                 model: FilmsComponentModel(
-                    dataCache: instance.container.dataCache) { [weak instance] event in
+                    dataCache: instance.container.dataCache,
+                    resource: FilmsResource(apiService: instance.container.apiService)
+                ) { [weak instance] event in
                     switch event {
                     case let .filmTapped(film):
                         instance?.path.append(.filmDetail(film))

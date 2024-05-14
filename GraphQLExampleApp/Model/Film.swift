@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import GraphQLGenerated
 
 struct Film: Hashable {
     let id: String
@@ -13,4 +14,17 @@ struct Film: Hashable {
     let releaseDate: String
     let director: String
     let planets: [Planet]
+}
+
+extension Film {
+    init?(from graphQlModel: AllFilmsQuery.Data.AllFilms.Film) {
+        guard let name = graphQlModel.title else {
+            return nil
+        }
+        self.id = graphQlModel.id
+        self.name = name
+        self.releaseDate = graphQlModel.releaseDate ?? ""
+        self.director = graphQlModel.director ?? ""
+        self.planets = []
+    }
 }

@@ -1,0 +1,18 @@
+query AllFilms {
+  allFilms {
+    films {
+      title
+      id
+      releaseDate
+      director
+      planetConnection {
+        planets {
+          id
+          name
+          population
+          gravity
+        }
+      }
+    }
+  }
+}

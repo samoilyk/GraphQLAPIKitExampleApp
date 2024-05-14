@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,10 @@
 		FC79DBDB2BF389E300E9E28D /* FilmDetailComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBD82BF389E300E9E28D /* FilmDetailComponentModel.swift */; };
 		FC79DBDC2BF389E300E9E28D /* FilmDetailComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBD92BF389E300E9E28D /* FilmDetailComponent.swift */; };
 		FC79DBDD2BF389E300E9E28D /* FilmDetailResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79DBDA2BF389E300E9E28D /* FilmDetailResource.swift */; };
+		FC79DBE52BF3B13B00E9E28D /* GraphQLGenerated in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBE42BF3B13B00E9E28D /* GraphQLGenerated */; };
+		FC79DBE72BF3B13B00E9E28D /* GraphQLGeneratedMocks in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBE62BF3B13B00E9E28D /* GraphQLGeneratedMocks */; };
+		FC79DBEC2BF3B2A100E9E28D /* GraphQLGenerated in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBEB2BF3B2A100E9E28D /* GraphQLGenerated */; };
+		FC79DBEE2BF3B2A100E9E28D /* GraphQLGeneratedMocks in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBED2BF3B2A100E9E28D /* GraphQLGeneratedMocks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +62,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC79DBEE2BF3B2A100E9E28D /* GraphQLGeneratedMocks in Frameworks */,
 				FC79DBBE2BF37C5300E9E28D /* FuturedHelpers in Frameworks */,
 				FC79DBC02BF37C5300E9E28D /* GraphQLAPIKit in Frameworks */,
+				FC79DBE52BF3B13B00E9E28D /* GraphQLGenerated in Frameworks */,
+				FC79DBE72BF3B13B00E9E28D /* GraphQLGeneratedMocks in Frameworks */,
+				FC79DBEC2BF3B2A100E9E28D /* GraphQLGenerated in Frameworks */,
 				FC79DBBC2BF37C5300E9E28D /* FuturedArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC072F6A2BF377C0009E2B8D /* Build configuration list for PBXNativeTarget "GraphQLExampleApp" */;
 			buildPhases = (
+				FC79DBE22BF3AE4000E9E28D /* ShellScript */,
 				FC072F492BF377BF009E2B8D /* Sources */,
 				FC072F4A2BF377BF009E2B8D /* Frameworks */,
 				FC072F4B2BF377BF009E2B8D /* Resources */,
@@ -201,6 +210,10 @@
 				FC79DBBB2BF37C5300E9E28D /* FuturedArchitecture */,
 				FC79DBBD2BF37C5300E9E28D /* FuturedHelpers */,
 				FC79DBBF2BF37C5300E9E28D /* GraphQLAPIKit */,
+				FC79DBE42BF3B13B00E9E28D /* GraphQLGenerated */,
+				FC79DBE62BF3B13B00E9E28D /* GraphQLGeneratedMocks */,
+				FC79DBEB2BF3B2A100E9E28D /* GraphQLGenerated */,
+				FC79DBED2BF3B2A100E9E28D /* GraphQLGeneratedMocks */,
 			);
 			productName = GraphQLExampleApp;
 			productReference = FC072F4D2BF377BF009E2B8D /* GraphQLExampleApp.app */;
@@ -233,6 +246,7 @@
 			packageReferences = (
 				FC072F6E2BF377F3009E2B8D /* XCRemoteSwiftPackageReference "FuturedKit" */,
 				FC072F6F2BF3783B009E2B8D /* XCRemoteSwiftPackageReference "GraphQLAPIKit" */,
+				FC79DBEA2BF3B2A100E9E28D /* XCLocalSwiftPackageReference "GraphQLGenerated" */,
 			);
 			productRefGroup = FC072F4E2BF377BF009E2B8D /* Products */;
 			projectDirPath = "";
@@ -253,6 +267,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FC79DBE22BF3AE4000E9E28D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nSDKROOT=$(/usr/bin/xcrun --sdk macosx --show-sdk-path)\nSWIFT_PACKAGES=\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts\"\n\n${SWIFT_PACKAGES}/GraphQLAPIKit/Resources/apollo-ios-cli generate --path ./GraphQLGenerated/apollo-codegen-config.json\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC072F492BF377BF009E2B8D /* Sources */ = {
@@ -465,6 +499,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GraphQLExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -487,6 +522,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GraphQLExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -509,6 +545,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GraphQLExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -549,6 +586,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		FC79DBEA2BF3B2A100E9E28D /* XCLocalSwiftPackageReference "GraphQLGenerated" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = GraphQLGenerated;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		FC072F6E2BF377F3009E2B8D /* XCRemoteSwiftPackageReference "FuturedKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -583,6 +627,22 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FC072F6F2BF3783B009E2B8D /* XCRemoteSwiftPackageReference "GraphQLAPIKit" */;
 			productName = GraphQLAPIKit;
+		};
+		FC79DBE42BF3B13B00E9E28D /* GraphQLGenerated */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GraphQLGenerated;
+		};
+		FC79DBE62BF3B13B00E9E28D /* GraphQLGeneratedMocks */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GraphQLGeneratedMocks;
+		};
+		FC79DBEB2BF3B2A100E9E28D /* GraphQLGenerated */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GraphQLGenerated;
+		};
+		FC79DBED2BF3B2A100E9E28D /* GraphQLGeneratedMocks */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GraphQLGeneratedMocks;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

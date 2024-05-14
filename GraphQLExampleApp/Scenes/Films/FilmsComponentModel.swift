@@ -22,12 +22,15 @@ final class FilmsComponentModel: ExampleComponentModelProtocol {
 
     @Published var films: [Film]?
     private let dataCache: DataCache<DataCacheModel>
+    private let resource: FilmsResourceProtocol
 
     init(
         dataCache: DataCache<DataCacheModel>,
+        resource: FilmsResourceProtocol,
         onEvent: @escaping (Event) -> Void
     ) {
         self.dataCache = dataCache
+        self.resource = resource
         self.onEvent = onEvent
     }
 
@@ -37,6 +40,17 @@ final class FilmsComponentModel: ExampleComponentModelProtocol {
             .compactMap { $0.films }
             .removeDuplicates()
             .assign(to: &$films)
+
+        await fetch()
+    }
+
+    func fetch() async {
+        switch await resource.getFilms() {
+        case .success(let films):
+            await dataCache.update(\.films, with: films)
+        case .failure(let error):
+            onEvent(.alert(title: error.localizedDescription, message: ""))
+        }
     }
 
     func tapped(on film: Film) {

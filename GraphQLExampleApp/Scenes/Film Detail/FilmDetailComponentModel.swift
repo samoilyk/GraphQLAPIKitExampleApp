@@ -66,7 +66,8 @@ final class FilmDetailComponentModelMock: FilmDetailComponentModelProtocol {
         Film(id: "filmId", name: "Film 1", releaseDate: "20.12.1974", director: "Director", planets: [
             Planet(id: "planetIdd", name: "Planet 1", population: 10000, gravity: "Gravity level")
         ]
-        ) }
+        )
+    }
 
     func planetTapped(id: String) {
         

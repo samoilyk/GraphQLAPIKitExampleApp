@@ -10,7 +10,6 @@ import GraphQLAPIKit
 
 protocol ApiServiceProtocol {
     func fetch<Query: GraphQLQuery>(query: Query) async -> Result<Query.Data, GraphQLAPIAdapterError>
-
     func perform<Mutation: GraphQLMutation>(mutation: Mutation) async -> Result<Mutation.Data, GraphQLAPIAdapterError>
 }
 
