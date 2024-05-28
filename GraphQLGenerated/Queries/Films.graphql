@@ -15,4 +15,13 @@ query AllFilms {
       }
     }
   }
+  allPeople {
+    people {
+      id
+      gender
+      birthYear
+      name
+      skinColor
+    }
+  }
 }

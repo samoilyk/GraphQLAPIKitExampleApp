@@ -7,5 +7,6 @@
 
 struct DataCacheModel: Equatable {
     var films: [Film]?
+    var people: [Person]?
     var planets: [Planet]?
 }

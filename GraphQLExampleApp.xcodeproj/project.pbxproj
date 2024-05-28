@@ -32,6 +32,8 @@
 		FC79DBE72BF3B13B00E9E28D /* GraphQLGeneratedMocks in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBE62BF3B13B00E9E28D /* GraphQLGeneratedMocks */; };
 		FC79DBEC2BF3B2A100E9E28D /* GraphQLGenerated in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBEB2BF3B2A100E9E28D /* GraphQLGenerated */; };
 		FC79DBEE2BF3B2A100E9E28D /* GraphQLGeneratedMocks in Frameworks */ = {isa = PBXBuildFile; productRef = FC79DBED2BF3B2A100E9E28D /* GraphQLGeneratedMocks */; };
+		FC7B0EB92C05ECCA00E442B7 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7B0EB82C05ECC900E442B7 /* PersonView.swift */; };
+		FC7B0EBB2C05ECDC00E442B7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7B0EBA2C05ECDC00E442B7 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		FC79DBD92BF389E300E9E28D /* FilmDetailComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailComponent.swift; sourceTree = "<group>"; };
 		FC79DBDA2BF389E300E9E28D /* FilmDetailResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailResource.swift; sourceTree = "<group>"; };
 		FC79DBDF2BF39A6200E9E28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FC7B0EB82C05ECC900E442B7 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		FC7B0EBA2C05ECDC00E442B7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				FC072F592BF377BF009E2B8D /* DataCacheModel.swift */,
 				FC79DBB62BF37B7D00E9E28D /* Film.swift */,
 				FC79DBB82BF37BA300E9E28D /* Planet.swift */,
+				FC7B0EBA2C05ECDC00E442B7 /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				FC79DBC22BF37E7500E9E28D /* FilmView.swift */,
+				FC7B0EB82C05ECC900E442B7 /* PersonView.swift */,
 				FC79DBCD2BF3849C00E9E28D /* PlanetView.swift */,
 			);
 			path = Views;
@@ -302,10 +308,12 @@
 				FC79DBB72BF37B7D00E9E28D /* Film.swift in Sources */,
 				FC072F572BF377BF009E2B8D /* Container.swift in Sources */,
 				FC072F5A2BF377BF009E2B8D /* DataCacheModel.swift in Sources */,
+				FC7B0EB92C05ECCA00E442B7 /* PersonView.swift in Sources */,
 				FC072F532BF377BF009E2B8D /* AppCoordinator.swift in Sources */,
 				FC072F512BF377BF009E2B8D /* GraphQLExampleAppApp.swift in Sources */,
 				FC072F782BF37958009E2B8D /* FilmsResource.swift in Sources */,
 				FC79DBB92BF37BA300E9E28D /* Planet.swift in Sources */,
+				FC7B0EBB2C05ECDC00E442B7 /* Person.swift in Sources */,
 				FC79DBCE2BF3849C00E9E28D /* PlanetView.swift in Sources */,
 				FC79DBC32BF37E7500E9E28D /* FilmView.swift in Sources */,
 				FC072F602BF377BF009E2B8D /* FilmsComponent.swift in Sources */,
