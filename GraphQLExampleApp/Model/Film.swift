@@ -9,11 +9,15 @@ import Foundation
 import GraphQLGenerated
 
 struct Film: Hashable {
+    struct Details: Hashable {
+        let releaseDate: String
+        let director: String
+        let planets: [Planet]
+    }
+
     let id: String
     let name: String
-    let releaseDate: String
-    let director: String
-    let planets: [Planet]
+    let details: Details?
 }
 
 extension Film {

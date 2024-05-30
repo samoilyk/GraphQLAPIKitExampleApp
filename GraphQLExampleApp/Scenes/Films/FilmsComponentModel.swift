@@ -9,18 +9,25 @@ import Combine
 import Foundation
 import FuturedArchitecture
 
-protocol ExampleComponentModelProtocol: ComponentModel {
-    var films: [Film]? { get }
+struct FilmsComponentData: Equatable {
+    let films: [Film]
+    let people: [Person]
+    let planets: [Planet]
+}
+
+protocol FilmsComponentModelProtocol: ComponentModel {
+    var data: FilmsComponentData? { get }
 
     func tapped(on film: Film)
     func onAppear() async
 }
 
-final class FilmsComponentModel: ExampleComponentModelProtocol {
+final class FilmsComponentModel: FilmsComponentModelProtocol {
 
     let onEvent: (Event) -> Void
 
-    @Published var films: [Film]?
+    @Published var data: FilmsComponentData?
+
     private let dataCache: DataCache<DataCacheModel>
     private let resource: FilmsResourceProtocol
 
@@ -37,17 +44,26 @@ final class FilmsComponentModel: ExampleComponentModelProtocol {
     func onAppear() async {
         await dataCache.$value
             .receive(on: DispatchQueue.main)
-            .compactMap { $0.films }
+            .compactMap { data in
+                guard let films = data.films, let people = data.people else {
+                    return nil
+                }
+
+                return FilmsComponentData(films: films, people: people)
+            }
             .removeDuplicates()
-            .assign(to: &$films)
+            .assign(to: &$data)
 
         await fetch()
     }
 
     func fetch() async {
         switch await resource.getFilms() {
-        case .success(let films):
-            await dataCache.update(\.films, with: films)
+        case let .success((films, people)):
+            var cache = await dataCache.value
+            cache.people = people
+            cache.films = films
+            await dataCache.update(with: cache)
         case .failure(let error):
             onEvent(.alert(title: error.localizedDescription, message: ""))
         }
@@ -66,15 +82,14 @@ extension FilmsComponentModel {
 }
 
 #if DEBUG
-final class FilmsComponentModelMock: ExampleComponentModelProtocol {
+final class FilmsComponentModelMock: FilmsComponentModelProtocol {
+    
     func tapped(on film: Film) {
 
     }
     
-    var films: [Film]? {
-        []
-    }
-    
+    var data: FilmsComponentData? { nil }
+
     typealias Event = FilmsComponentModel.Event
 
     var onEvent: (FilmsComponentModel.Event) -> Void = { _ in }

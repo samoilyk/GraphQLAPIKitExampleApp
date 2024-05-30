@@ -7,19 +7,25 @@
 
 import SwiftUI
 
-struct FilmsComponent<Model: ExampleComponentModelProtocol>: View {
+struct FilmsComponent<Model: FilmsComponentModelProtocol>: View {
     @StateObject var model: Model
 
     var body: some View {
         Group {
-            if let films = model.films {
+            if let data = model.data {
                 List {
-                    ForEach(films, id: \.id) { film in
-                        FilmView(film: film)
-                            .contentShape(Rectangle())
-                            .onTapGesture {
-                                model.tapped(on: film)
-                            }
+                    Section("Filmy") {
+                        ForEach(data.films, id: \.id) { film in
+                            FilmView(film: film)
+                                .contentShape(Rectangle())
+                                .onTapGesture {
+                                    model.tapped(on: film)
+                                }
+                        }
+                    }
+
+                    Section("Herci") {
+                        ForEach(data.people, id: \.id, content: PersonView.init)
                     }
                 }
             } else {

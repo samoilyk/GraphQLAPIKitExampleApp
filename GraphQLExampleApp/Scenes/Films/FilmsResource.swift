@@ -13,7 +13,7 @@ enum FilmsResourceError: Error {
 }
 
 protocol FilmsResourceProtocol {
-    func getFilms() async -> Result<[Film], Error>
+    func getFilms() async -> Result<([Film], [Person]), Error>
 }
 
 struct FilmsResource: FilmsResourceProtocol {
@@ -23,16 +23,18 @@ struct FilmsResource: FilmsResourceProtocol {
         self.apiService = apiService
     }
 
-    func getFilms() async -> Result<[Film], Error> {
+    func getFilms() async -> Result<([Film], [Person]), Error> {
         let result = await apiService.fetch(query: AllFilmsQuery())
 
         switch result {
         case .success(let data):
-            guard let films = data.allFilms?.films else {
+            guard let graphQLfilms = data.allFilms?.films, let graphQLPeople = data.allPeople?.people else {
                 return .failure(FilmsResourceError.invalidData)
             }
 
-            return .success(films.compactMap { $0.flatMap { Film(from: $0) } })
+            let films = graphQLfilms.compactMap { $0.flatMap { Film(from: $0) } }
+            let people = graphQLPeople.compactMap { $0.flatMap { Person(from: $0)} }
+            return .success((films, people))
         case .failure(let error):
             return .failure(error)
         }
